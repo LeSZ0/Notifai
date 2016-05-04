@@ -104,7 +104,7 @@ $base = 'web/';
                     <ul class="nav">
                         <ul class="nav" style="margin-left: 32%" >
                         <li class="dropdown">   
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
                                 <span class="glyphicon glyphicon-user" style="font-size: 25px;"></span>
                             </a>
                             <div class="dropdown-menu dropdown-settings">
@@ -125,6 +125,7 @@ $base = 'web/';
                                 <a href="#" class="btn btn-info btn-sm">Full Profile</a>&nbsp; <a href="login.html" class="btn btn-danger btn-sm">Logout</a>
 
                             </div>
+                            -->
                         </li>
 
 

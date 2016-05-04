@@ -6,14 +6,15 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Evento */
 
-$this->title = $model->id_evento;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Eventos'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = $model->nombre;
+//$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Eventos'), 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="evento-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
+    <h1 class='page-head-line'><?= Html::encode($this->title) ?></h1>
+    
+    <?php if (!Yii::$app->user->isGuest): ?>
     <p>
         <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id_evento], ['class' => 'btn btn-primary']) ?>
         <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id_evento], [
@@ -37,4 +38,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
+    <?php endif; ?>
+    <p><?= Html::encode($model->descripcion) ?></p>
 </div>
